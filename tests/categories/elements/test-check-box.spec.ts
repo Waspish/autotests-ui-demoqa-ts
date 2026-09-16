@@ -20,5 +20,18 @@ test('selecting Home marks all child items', async ({
     'desktop',
     'documents',
     'downloads',
+    'notes',
+    'commands',
+    'workspace',
+    'office',
+    'wordFile',
+    'excelFile',
+    'react',
+    'angular',
+    'veu',
+    'public',
+    'private',
+    'classified',
+    'general',
   ]);
 });

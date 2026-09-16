@@ -1,0 +1,17 @@
+{
+  "name": "autotests-ui-demoqa-typescript",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "report": "playwright show-report",
+    "test:parallel": "playwright test --workers=3"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/node": "^24.0.0",
+    "allure-playwright": "^3.4.0",
+    "dotenv": "^17.4.2",
+    "typescript": "^5.9.0"
+  }
+}

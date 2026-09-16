@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "playwright test",
+    "test": "playwright test --workers=1",
     "report": "playwright show-report",
     "test:parallel": "playwright test --workers=3"
   },

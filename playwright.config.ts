@@ -12,6 +12,7 @@ export default defineConfig({
   ],
 
   use: {
+    channel: 'chrome',
     baseURL: process.env.APP_URL,
     headless: process.env.HEADLESS === 'true',
     trace: 'on',

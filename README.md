@@ -4,13 +4,6 @@
 
 ```bash
 npm ci
-```
-
-```bash
-npx playwright install chromium
-```
-
-```bash
 npm test
 ```
 

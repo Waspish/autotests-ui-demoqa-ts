@@ -1,4 +1,4 @@
-import { test } from '../../../fixtures/test';
+import { test } from '../../../src/fixtures/test';
 
 test('selecting Home marks all child items', async ({
   homePage,

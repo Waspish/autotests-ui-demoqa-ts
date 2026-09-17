@@ -1,4 +1,4 @@
-import { test } from '../../../fixtures/test';
+import { test } from '../../../src/fixtures/test';
 
 test('text box is filled successfully', async ({ homePage, categoriesPage }) => {
   const fullName = 'Andrei';

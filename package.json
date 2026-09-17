@@ -5,7 +5,8 @@
   "scripts": {
     "test": "playwright test --workers=1",
     "report": "playwright show-report",
-    "test:parallel": "playwright test --workers=3"
+    "test:parallel": "playwright test --workers=3",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",

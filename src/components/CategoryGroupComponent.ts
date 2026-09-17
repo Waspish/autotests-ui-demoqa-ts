@@ -1,6 +1,6 @@
 import { type Page } from '@playwright/test';
 import { BaseComponent } from './BaseComponent';
-import { CategoryGroupComponentListItem } from './CategoryGroupComponent-list-item';
+import { CategoryGroupComponentListItem } from './CategoryGroupComponentListItem';
 import { BaseElement } from '../elements/BaseElement';
 
 export class CategoryGroupComponent extends BaseComponent {

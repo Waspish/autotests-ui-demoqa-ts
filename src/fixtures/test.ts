@@ -1,4 +1,4 @@
-import { test as base, expect } from '@playwright/test';
+import { test as base } from '@playwright/test';
 import { CategoriesPage } from '../pages/CategoriesPage';
 import { HomePage } from '../pages/HomePage';
 
@@ -15,5 +15,3 @@ export const test = base.extend<Fixtures>({
     await use(new CategoriesPage(page));
   },
 });
-
-export { expect };

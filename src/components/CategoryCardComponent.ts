@@ -1,3 +1,4 @@
+import { type Page } from '@playwright/test';
 import { BaseComponent } from './BaseComponent';
 import { Link } from '../elements/Link';
 
@@ -5,7 +6,7 @@ export class CategoryCardComponent extends BaseComponent {
   readonly link: Link;
 
   constructor(
-    page: import('@playwright/test').Page,
+    page: Page,
     readonly identifier: string,
   ) {
     super(page);

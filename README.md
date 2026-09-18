@@ -2,6 +2,7 @@
 
 ```bash
 npm ci
+npx playwright install chromium
 npm test
 ```
 
@@ -19,12 +20,6 @@ npm run report
 
 ```bash
 npm run test:parallel
-```
-
-### Нюансы
-Для работы на пк должен стоять chrome, если нету, то можно убрать channel: 'chrome' из конфига и запустить:
-```bash
-npx playwright install chromium
 ```
 
 > `.env` добавлен, чтобы не создавать вручную, так как это тестовый проект.

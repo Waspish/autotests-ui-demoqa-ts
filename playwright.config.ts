@@ -3,16 +3,7 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   fullyParallel: true,
-  reporter: [
-    ['list'],
-    ['html', { open: 'never' }],
-    [
-      'allure-playwright',
-      {
-        resultsDir: process.env.ALLURE_RESULTS_DIR,
-      },
-    ],
-  ],
+  reporter: [['list'], ['html', { open: 'never' }]],
 
   use: {
     baseURL: process.env.APP_URL,

@@ -8,8 +8,12 @@ export type Fixtures = {
 };
 
 export const test = base.extend<Fixtures>({
-  homePage: async ({ page }, use) => { await use(new HomePage(page)); },
-  categoriesPage: async ({ page }, use) => { await use(new CategoriesPage(page)); },
+  homePage: async ({ page }, use) => {
+    await use(new HomePage(page));
+  },
+  categoriesPage: async ({ page }, use) => {
+    await use(new CategoriesPage(page));
+  },
 });
 
 export { expect };

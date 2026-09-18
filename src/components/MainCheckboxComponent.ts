@@ -8,11 +8,7 @@ export class MainCheckBoxComponent extends BaseComponent {
   constructor(page: Page) {
     super(page);
 
-    this.homeCheckBox = new CheckBox(
-      page,
-      '[role="checkbox"][aria-label="Select Home"]',
-      'Home',
-    );
+    this.homeCheckBox = new CheckBox(page, '[role="checkbox"][aria-label="Select Home"]', 'Home');
   }
 
   async checkSelectedItems(items: string[]): Promise<void> {

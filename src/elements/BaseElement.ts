@@ -7,7 +7,9 @@ export class BaseElement {
     readonly name: string,
   ) {}
 
-  get typeOf(): string { return 'base element'; }
+  get typeOf(): string {
+    return 'base element';
+  }
 
   getLocator(nth = 0): Locator {
     return this.page.locator(this.locator).nth(nth);

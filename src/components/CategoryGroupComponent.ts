@@ -8,24 +8,17 @@ export class CategoryGroupComponent extends BaseComponent {
   readonly textBox: CategoryGroupComponentListItem;
   readonly checkBox: CategoryGroupComponentListItem;
 
-  constructor(page: Page, readonly identifier: string) {
+  constructor(
+    page: Page,
+    readonly identifier: string,
+  ) {
     super(page);
 
-    this.baseElement = new BaseElement(
-      page,
-      `//div[text()="${identifier}"]`,
-      identifier,
-    );
+    this.baseElement = new BaseElement(page, `//div[text()="${identifier}"]`, identifier);
 
-    this.textBox = new CategoryGroupComponentListItem(
-      page,
-      'text-box',
-    );
+    this.textBox = new CategoryGroupComponentListItem(page, 'text-box');
 
-    this.checkBox = new CategoryGroupComponentListItem(
-      page,
-      'checkbox',
-    );
+    this.checkBox = new CategoryGroupComponentListItem(page, 'checkbox');
   }
 
   async checkVisible(): Promise<void> {

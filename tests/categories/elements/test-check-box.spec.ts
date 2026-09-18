@@ -1,9 +1,6 @@
 import { test } from '../../../src/fixtures/test';
 
-test('selecting Home marks all child items', async ({
-  homePage,
-  categoriesPage,
-}) => {
+test('selecting Home marks all child items', async ({ homePage, categoriesPage }) => {
   await homePage.visit();
 
   await homePage.elementsCard.checkVisible();

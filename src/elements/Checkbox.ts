@@ -2,7 +2,9 @@ import { expect } from '@playwright/test';
 import { BaseElement } from './BaseElement';
 
 export class CheckBox extends BaseElement {
-  get typeOf(): string { return 'checkbox'; }
+  get typeOf(): string {
+    return 'checkbox';
+  }
 
   async check(nth = 0): Promise<void> {
     await this.getLocator(nth).click();

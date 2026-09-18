@@ -23,22 +23,22 @@ export class MainTextBoxComponent extends BaseComponent {
     this.title = new Text(page, '//h1[text()="Text Box"]', 'Text Box');
     this.fullNameInput = new Input(page, '//input[@id="userName"]', 'Full Name');
     this.emailInput = new Input(page, '//input[@id="userEmail"]', 'Email');
-    this.currentAddressTextarea = new TextArea(page, '//textarea[@id="currentAddress"]', 'Current Address');
-    this.permanentAddressTextarea = new TextArea(page, '//textarea[@id="permanentAddress"]', 'Permanent Address');
+    this.currentAddressTextarea = new TextArea(
+      page,
+      '//textarea[@id="currentAddress"]',
+      'Current Address',
+    );
+    this.permanentAddressTextarea = new TextArea(
+      page,
+      '//textarea[@id="permanentAddress"]',
+      'Permanent Address',
+    );
     this.submitButton = new Button(page, '//button[@id="submit"]', 'Submit');
-      this.output = new Text(page, '//div[@id="output"]', 'Output');
+    this.output = new Text(page, '//div[@id="output"]', 'Output');
 
-    this.outputName = new Text(
-      page,
-      '//p[@id="name"]',
-      'Output Name',
-    );
+    this.outputName = new Text(page, '//p[@id="name"]', 'Output Name');
 
-    this.outputEmail = new Text(
-      page,
-      '//p[@id="email"]',
-      'Output Email',
-    );
+    this.outputEmail = new Text(page, '//p[@id="email"]', 'Output Email');
 
     this.outputCurrentAddress = new Text(
       page,
@@ -53,7 +53,12 @@ export class MainTextBoxComponent extends BaseComponent {
     );
   }
 
-  async checkVisible(fullName: string, email: string, currentAddress: string, permanentAddress: string): Promise<void> {
+  async checkVisible(
+    fullName: string,
+    email: string,
+    currentAddress: string,
+    permanentAddress: string,
+  ): Promise<void> {
     await this.title.checkVisible();
     await this.title.checkHaveText('Text Box');
     await this.fullNameInput.checkVisible();
@@ -67,14 +72,21 @@ export class MainTextBoxComponent extends BaseComponent {
     await this.submitButton.checkVisible();
   }
 
-  async fill(fullName: string, email: string, currentAddress: string, permanentAddress: string): Promise<void> {
+  async fill(
+    fullName: string,
+    email: string,
+    currentAddress: string,
+    permanentAddress: string,
+  ): Promise<void> {
     await this.fullNameInput.fill(fullName);
     await this.emailInput.fill(email);
     await this.currentAddressTextarea.fill(currentAddress);
     await this.permanentAddressTextarea.fill(permanentAddress);
   }
 
-  async clickSubmitButton(): Promise<void> { await this.submitButton.click(); }
+  async clickSubmitButton(): Promise<void> {
+    await this.submitButton.click();
+  }
 
   async checkEmailHasError(): Promise<void> {
     await this.emailInput.checkHaveClass(/field-error/);
@@ -90,11 +102,7 @@ export class MainTextBoxComponent extends BaseComponent {
 
     await this.outputName.checkHaveText(`Name:${fullName}`);
     await this.outputEmail.checkHaveText(`Email:${email}`);
-    await this.outputCurrentAddress.checkHaveText(
-      `Current Address :${currentAddress}`,
-    );
-    await this.outputPermanentAddress.checkHaveText(
-      `Permananet Address :${permanentAddress}`,
-    );
+    await this.outputCurrentAddress.checkHaveText(`Current Address :${currentAddress}`);
+    await this.outputPermanentAddress.checkHaveText(`Permananet Address :${permanentAddress}`);
   }
 }

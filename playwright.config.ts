@@ -6,16 +6,19 @@ export default defineConfig({
   reporter: [
     ['list'],
     ['html', { open: 'never' }],
-    ['allure-playwright', {
-      resultsDir: process.env.ALLURE_RESULTS_DIR,
-    }],
+    [
+      'allure-playwright',
+      {
+        resultsDir: process.env.ALLURE_RESULTS_DIR,
+      },
+    ],
   ],
 
   use: {
-    channel: 'chrome',
     baseURL: process.env.APP_URL,
     headless: process.env.HEADLESS === 'true',
     trace: 'on',
+    video: 'on',
     screenshot: 'only-on-failure',
   },
 });

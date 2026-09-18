@@ -2,7 +2,9 @@ import { expect } from '@playwright/test';
 import { BaseElement } from './BaseElement';
 
 export class TextArea extends BaseElement {
-  get typeOf(): string { return 'textarea'; }
+  get typeOf(): string {
+    return 'textarea';
+  }
 
   async fill(value: string, nth = 0): Promise<void> {
     await this.getLocator(nth).fill(value);
